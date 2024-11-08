@@ -17,6 +17,7 @@ const WeatherFinder = () => {
   }
 
   const fetchWeather = async () => {
+   
     try {
       const api = `http://api.weatherapi.com/v1/current.json?key=4788408d446a4fd19d5114021240411&q=${city}&aqi=yes`
       const resp = await fetch(api)
@@ -39,6 +40,7 @@ const WeatherFinder = () => {
     }
   }
 
+
   return (
     <div className="video-background">
       <video autoPlay muted loop>
@@ -52,7 +54,7 @@ const WeatherFinder = () => {
           onChange={handleinput}
           className="search-area"
         />
-        <button className="btn" onClick={fetchWeather}>
+        <button className="btn" onClick={fetchWeather} >
           find
         </button>
         <div className="weather-container" data={data}>
